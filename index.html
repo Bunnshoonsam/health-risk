@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health Risk Calculator - Sunny Edition</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <h1>Health Risk Calculator</h1>
+        <nav>
+            <ul>
+                <li><a href="#home" class="nav-link active" data-target="home">Home</a></li>
+                <li class="dropdown">
+                    <a href="#" class="nav-link">Calculators ▼</a>
+                    <div class="dropdown-content">
+                        <a href="#depression-calculator" class="nav-link" data-target="depression-calculator">Depression Risk</a>
+                        <a href="#cardio-calculator" class="nav-link" data-target="cardio-calculator">Cardiovascular Risk</a>
+                        <a href="#generic-disorder" class="nav-link" data-target="generic-disorder">Generic Disorder Info</a>
+                    </div>
+                </li>
+                 <li class="dropdown">
+                    <a href="#" class="nav-link">Health Information ▼</a>
+                    <div class="dropdown-content">
+                        <a href="#info-risks" class="nav-link" data-target="info-risks">Understanding Risks</a>
+                        <a href="#info-heart" class="nav-link" data-target="info-heart">Heart Disease</a>
+                        <a href="#info-musculoskeletal" class="nav-link" data-target="info-musculoskeletal">Musculoskeletal</a>
+                        <a href="#info-metabolic" class="nav-link" data-target="info-metabolic">Metabolic Disorders</a>
+                        <a href="#info-respiratory" class="nav-link" data-target="info-respiratory">Respiratory Conditions</a>
+                        <a href="#info-liver" class="nav-link" data-target="info-liver">Liver Health</a>
+                        <a href="#info-mental" class="nav-link" data-target="info-mental">Mental Well-being</a>
+                    </div>
+                </li>
+                 <li><a href="#chatbot-section" class="nav-link" data-target="chatbot-section">Chat Assistant</a></li>
+                <li><a href="#about" class="nav-link" data-target="about">About</a></li>
+                <li><a href="#privacy" class="nav-link" data-target="privacy">Privacy</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Home Section (Visible by default) -->
+        <section id="home" class="content-section visible">
+            <h2>Welcome to the Health Risk Calculator</h2>
+            <p>Explore your health risks based on lifestyle, genetics, and other factors. Use the calculators and read the health information sections.</p>
+            <p><strong>Disclaimer:</strong> This tool provides estimates based on general models and user input. It is NOT a substitute for professional medical advice, diagnosis, or treatment. Always seek the advice of your physician or other qualified health provider.</p>
+        </section>
+
+        <!-- Depression Risk Calculator Section -->
+        <section id="depression-calculator" class="content-section">
+            <h2>Depression Risk Calculator</h2>
+            <p class="disclaimer"><strong>Warning:</strong> This calculation uses an EXAMPLE blueprint ONLY. It is NOT MEDICALLY VALIDATED. Results are illustrative. Consult a healthcare professional for accurate assessment.</p>
+            <form id="depressionForm">
+                <div class="form-group">
+                    <label for="depAge">Age:</label>
+                    <input type="number" id="depAge" name="age" required min="1">
+                </div>
+                <div class="form-group">
+                    <label for="depSex">Sex:</label>
+                    <select id="depSex" name="sex" required>
+                        <option value="">--Select--</option>
+                        <option value="female">Female</option>
+                        <option value="male">Male</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="depFamilyHistory">Family History of Depression:</label>
+                    <select id="depFamilyHistory" name="familyHistory" required>
+                        <option value="">--Select--</option>
+                        <option value="yes">Yes</option>
+                        <option value="no">No</option>
+                    </select>
+                </div>
+                 <div class="form-group">
+                    <label for="depLifeEvents">Number of Stressful Life Events (Past 6 Months):</label>
+                    <input type="number" id="depLifeEvents" name="lifeEvents" required min="0">
+                </div>
+                 <div class="form-group">
+                    <label for="depSleep">Sleep Patterns:</label>
+                    <select id="depSleep" name="sleep" required>
+                         <option value="">--Select--</option>
+                        <option value="good">Good Quality</option>
+                        <option value="poor">Poor Quality / Insomnia</option>
+                    </select>
+                </div>
+                 <div class="form-group">
+                    <label for="depSupport">Social Support Network:</label>
+                     <select id="depSupport" name="support" required>
+                        <option value="">--Select--</option>
+                        <option value="strong">Strong</option>
+                        <option value="weak">Weak</option>
+                    </select>
+                </div>
+                <button type="submit">Calculate Risk</button>
+            </form>
+            <div id="depressionResult" class="result-area">
+                <!-- Result will be displayed here -->
+            </div>
+        </section>
+
+        <!-- Cardiovascular Risk Calculator Section (Placeholder) -->
+        <section id="cardio-calculator" class="content-section">
+             <h2>Cardiovascular Risk Calculator</h2>
+             <p class="disclaimer"><strong>Note:</strong> Comprehensive assessment requires validated models & data (often clinical). This is a placeholder.</p>
+             <form id="cardioForm">
+                 <!-- Add simplified fields if desired, or leave as placeholder -->
+                  <p>Input fields for a validated model (like Framingham, SCORE2, etc.) would go here.</p>
+                 <button type="button" onclick="alert('Cardiovascular calculation requires a validated backend model and is not implemented in this demo.')">Calculate Risk (Demo)</button>
+             </form>
+              <div id="cardioResult" class="result-area"></div>
+         </section>
+
+        <!-- Generic Disorder Info Section (Placeholder) -->
+        <section id="generic-disorder" class="content-section">
+             <h2>Generic Disorder Identification (Conceptual)</h2>
+             <p>Uses complex bioinformatics (genomics, proteomics etc.). Requires specialized backend systems.</p>
+             <!-- Keep or remove outline as preferred -->
+        </section>
+
+        <!-- Chatbot UI Section (NON-FUNCTIONAL DEMO) -->
+        <section id="chatbot-section" class="content-section">
+            <h2>Chat Assistant (UI Demo)</h2>
+             <p class="disclaimer"><strong>Note:</strong> This is a visual demonstration only. The chat bot is not connected to an AI and cannot respond dynamically.</p>
+            <div id="chatbox">
+                <div id="chat-history">
+                    <!-- Initial Greeting -->
+                    <p class="bot-message initial-greeting">
+                        <strong>Assistant:</strong> Ram ram bhai beheno! 🙏 Dubara zaroor aana... kahi Ram naam satya na ho jaye! 😉
+                    </p>
+                    <!-- Chat messages will appear here -->
+                </div>
+                <div id="chat-input-area">
+                    <input type="text" id="chat-input" placeholder="Type your message here..." aria-label="Chat message input">
+                    <button id="send-chat-btn" aria-label="Send chat message">Send</button>
+                </div>
+                <div id="chat-loading" class="loading-indicator" style="display: none;"><i>Thinking...</i></div>
+            </div>
+        </section>
+
+        <!-- Information Sections (Keep content placeholders as before) -->
+         <section id="info-risks" class="content-section"><h2>Understanding Health Risks</h2><p>[Content Here]</p></section>
+         <section id="info-heart" class="content-section"><h2>Heart Disease</h2><p>[Content Here]</p></section>
+         <section id="info-musculoskeletal" class="content-section"><h2>Musculoskeletal</h2><p>[Content Here]</p></section>
+         <section id="info-metabolic" class="content-section"><h2>Metabolic Disorders</h2><p>[Content Here]</p></section>
+         <section id="info-respiratory" class="content-section"><h2>Respiratory Conditions</h2><p>[Content Here]</p></section>
+         <section id="info-liver" class="content-section"><h2>Liver Health</h2><p>[Content Here]</p></section>
+         <section id="info-mental" class="content-section"><h2>Mental Well-being</h2><p>[Content Here]</p></section>
+
+        <!-- About Section -->
+        <section id="about" class="content-section">
+            <h2>About This Tool</h2>
+             <p>[Content about purpose, methodology, limitations Here]</p>
+        </section>
+
+        <!-- Privacy Section -->
+        <section id="privacy" class="content-section">
+            <h2>Privacy and Data Security</h2>
+            <p>[Content about data handling, security (especially for frontend demo) Here]</p>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>© 2023 Health Risk Calculator. All rights reserved.</p>
+        <p><strong>Disclaimer:</strong> Informational purposes only. Not medical advice.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
